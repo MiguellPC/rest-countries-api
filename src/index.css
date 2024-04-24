@@ -1,0 +1,44 @@
+:root {
+  --light-mode-bg: hsl(0, 0%, 98%);
+  --light-mode-text: hsl(200, 15%, 8%);
+  --light-mode-input: hsl(0, 0%, 52%);
+  --dark-mode-elements: hsl(209, 23%, 22%);
+  --dark-mode-bg: hsl(207, 26%, 17%);
+  --white: hsl(0, 0%, 100%);
+
+  font-family: 'Nunito Sans', sans-serif;
+  color-scheme: light dark;
+  color: var(--white);
+  background-color: var(--dark-mode-bg);
+
+  line-height: 1.5;
+  font-size: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html:has(.light-mode),
+html:not(:has(.light-mode)) {
+  transition: all 50ms linear;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.light-mode {
+  color: var(--light-mode-text);
+  background-color: var(--light-mode-bg);
+}

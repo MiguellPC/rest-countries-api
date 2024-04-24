@@ -1,0 +1,69 @@
+.select-dropdown {
+  background-color: var(--dark-mode-elements);
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--white);
+  font-family: inherit;
+  position: relative;
+
+  select {
+    appearance: none;
+    padding: 1rem 3rem 1rem 1rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  &::before,
+  &::after {
+    --size: 0.3rem;
+    content: '';
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+  }
+
+  &::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid var(--white);
+    top: 40%;
+  }
+
+  &::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid var(--white);
+    top: 55%;
+  }
+}
+
+.light-mode .select-dropdown {
+  background-color: var(--light-mode-elements);
+  color: var(--light-mode-text);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  select {
+    color: var(--light-mode-text);
+  }
+
+  &::before {
+    border-bottom: var(--size) solid var(--light-mode-text);
+  }
+
+  &::after {
+    border-top: var(--size) solid var(--light-mode-text);
+  }
+}

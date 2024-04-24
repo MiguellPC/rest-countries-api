@@ -1,0 +1,33 @@
+main {
+  margin: 1rem 4rem;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 1rem auto;
+
+    header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .cards {
+      gap: 2rem;
+    }
+  }
+}
